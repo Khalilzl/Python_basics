@@ -1,4 +1,4 @@
-# Settings
+# Notebook settings
 
 ```python 
 from IPython.core.interactiveshell import InteractiveShell

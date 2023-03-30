@@ -18,15 +18,12 @@ Some useful resources:
 ```python 
 # Strip removes trailing spaces
 a = "this is a string        "
-print(a)
 a = a.strip()
-print(a)
 
 # Split splits a string into a list of tokens
 a = "this is a string"
-print(a)
 a = a.split(" ")
-print(a)
+# The output is: ['this', 'is', 'a', 'string']
 
 # Join, joins iterable elements, separated by the character specified between ""
 print(a)

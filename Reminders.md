@@ -1,4 +1,4 @@
-# Notebook settings
+## Notebook settings
 
 ```python 
 from IPython.core.interactiveshell import InteractiveShell
@@ -12,24 +12,23 @@ Some useful resources:
 [sklearn OLS](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares)
 
 
-# Python basics: Lists, tuples, Dictionaries, Arrays, Strings
-## strip(), split(), and join() to split strings into lists and remove trailing spaces
-
+## Python basics: Lists, tuples, Dictionaries, Arrays, Strings
+### strip(), split(), and join() to split strings into lists and remove trailing spaces
 
 ```python 
-# Strip
+# Strip removes trailing spaces
 a = "this is a string        "
 print(a)
 a = a.strip()
 print(a)
 
-# Split
+# Split splits a string into a list of tokens
 a = "this is a string"
 print(a)
 a = a.split(" ")
 print(a)
 
-# Join
+# Join, joins iterable elements, separated by the character specified between ""
 print(a)
 a = "-".join(a)
 print(a)

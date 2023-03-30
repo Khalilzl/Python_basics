@@ -1,7 +1,9 @@
 # Settings
 
+```python 
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
+```
 
 Some useful resources:
 <br>
@@ -12,3 +14,5 @@ Some useful resources:
 [numpy quick start](https://numpy.org/doc/stable/user/quickstart.html)
 
 # Python basics: Lists, tuples, Dictionaries, Arrays, Strings and such
+
+

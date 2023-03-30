@@ -1,5 +1,4 @@
-### Given a list of dictionaries, return the dictionary with the largest value for a given key.
-### If there are repetitions, return any of them.
+### Given a list of dictionaries, return the dictionary with the largest value for a given key. If there are repetitions, return any of them.
 
 ```python
 d1 = {'a':1,'b':2,'c':3}
@@ -34,7 +33,7 @@ for i,digits in enumerate(list_of_n):
 new_list
 ```
 
-### Using enumerate and zip: Write a function to find the longest common prefix among a list of strings
+### Using enumerate and zip, find the longest common prefix among a list of strings
 The * character : when it appears behind an iterable object, what it does is passing the items inside the iterable to the function's caller one by one.
 The zip function accepts a list of iterables in order to return their aligned columns
 So, zip(*input) passes all the items inside the input as arguments to zip function, which then gives the iterables in order of the columns.
@@ -50,3 +49,18 @@ for i, chars in enumerate(zip(*input)):
     init_stri= init_stri + chars[0]
 print(init_stri)
 ```
+
+### Count consecutive sequence characters in a string
+```python
+import itertools
+
+mystring = 'hhheleee'
+
+mylist = []
+for k,g in itertools.groupby(mystring):
+  mylist.append((k,len(list(g))))
+  
+print(mylist)
+```
+
+

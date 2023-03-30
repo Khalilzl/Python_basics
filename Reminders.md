@@ -5,13 +5,6 @@ from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 ```
 
-Some useful resources:
-<br>
-[Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html)
-[numpy quick start](https://numpy.org/doc/stable/user/quickstart.html)
-[sklearn OLS](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares)
-
-
 ## Python basics: Manipulating lists, tuples, dictionaries, arrays, and strings
 ### strip(), split(), and join() to split strings into lists and remove trailing spaces
 

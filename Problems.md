@@ -1,11 +1,12 @@
 ### Given a list of dictionaries, return the dictionary with the largest value for a given key. If there are repetitions, return any of them.
 
 ```python
+# Dictionaries d1 and d2
 d1 = {'a':1,'b':2,'c':3}
 d2 = {'s':1,'f':2,'w':3}
+my_list = [d1,d2]
 
 max_dict = []
-my_list = [d1,d2]
 
 # keep track of index and iterate over the list
 for i,c in enumerate(my_list):
@@ -21,7 +22,6 @@ my_list[chosen_dict[0]]
 
 ```python
 list_of_n = [1,42,53,31]
-
 new_list = []
 
 for i,digits in enumerate(list_of_n):
@@ -29,8 +29,6 @@ for i,digits in enumerate(list_of_n):
   for t in str(digits):
     sum = sum + int(t)
   new_list.append(sum)
-
-new_list
 ```
 
 ### Using enumerate and zip, find the longest common prefix among a list of strings
@@ -53,13 +51,11 @@ print(init_stri)
 ### Count consecutive sequence characters in a string
 ```python
 import itertools
-
 mystring = 'hhheleee'
 
 mylist = []
 for k,g in itertools.groupby(mystring):
   mylist.append((k,len(list(g))))
-  
 print(mylist)
 ```
 

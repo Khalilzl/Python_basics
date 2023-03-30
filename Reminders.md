@@ -19,9 +19,7 @@ a = a.split(" ")
 # The output is: ['this', 'is', 'a', 'string']
 
 # Join, joins iterable elements, separated by the character specified between ""
-print(a)
 a = "-".join(a)
-print(a)
 
 ```
 
@@ -37,14 +35,14 @@ filtered_list = [ i for i in numbers if i>= 80]
 my_list = [['d',2],['v',4],['a',3]]
 print(sorted(my_list,key = lambda tup: tup[0],reverse=False))
 
-# Sorting based on all elements in tuple
-l = [[1,3,2],[3,4,2],[3,1,4],[1,2,3]]
-print(sorted(l, key= lambda t:(t[0],t[1],t[2])))
-
+# Sorting based on all elements in tuple (2 var)
 my_list = [['d',2],['v',4],['a',3],['v',5]]
 sorted(my_list, key=lambda tup: (tup[0],tup[1]),reverse=True)
-print('')
 sorted(my_list, key=lambda tup: (tup[0],-tup[1]),reverse=True)
+
+# Sorting based on all elements in tuple (3 var)
+l = [[1,3,2],[3,4,2],[3,1,4],[1,2,3]]
+print(sorted(l, key= lambda t:(t[0],t[1],t[2])))
 ```
 
 ### Filtering a dictionary based on values or keys
@@ -53,11 +51,9 @@ sorted(my_list, key=lambda tup: (tup[0],-tup[1]),reverse=True)
 # Filtering based on values
 d1 = {'a':1,'b':2,'c':3}
 new_dict = {key: value for key, value in d1.items() if value > 1}
-new_dict
 
 # Filtering based on keys
 d1 = {'a':1,'b':2,'c':3}
-d1
 d2 = {key:value for key,value in d1.items() if key=='a'}
 ```
 

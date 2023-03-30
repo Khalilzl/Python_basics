@@ -1,10 +1,3 @@
-## Notebook settings
-
-```python 
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-```
-
 ## Python basics: Manipulating lists, tuples, dictionaries, arrays, and strings
 ### strip(), split(), and join() to split strings into lists and remove trailing spaces
 

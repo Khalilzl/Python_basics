@@ -69,7 +69,6 @@ print(dict(sorted(my_dict.items(), key=lambda item: item[1],reverse=False)))
 # Sorting a dictionary by value then by key
 print(dict(sorted(my_dict.items(), key=lambda item: (item[1],item[0]))))
 print(dict(sorted(my_dict.items(), key=lambda item: (-item[1],item[0]), reverse=True)))
-print(dict(sorted(my_dict.items(), key=lambda item: (-item[1],item[0]), reverse=False)))
 ```
 
 ### List transformation using map and lambda
@@ -77,10 +76,8 @@ print(dict(sorted(my_dict.items(), key=lambda item: (-item[1],item[0]), reverse=
 ```python
 # Make a list of the squares of integers from  to  (both included).
 l1 = list(range(10))
-print('')
 l2 =list(map(lambda x: x*2,l1))
 l3 = list(map(lambda x:x*x, l1))
 
 print(l1,l2,l3)
 ```
-

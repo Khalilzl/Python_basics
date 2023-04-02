@@ -107,7 +107,7 @@ array_1 = np.array([[1,2,3],[0,0,0]])
 array_2 = np.array([[0,0,0],[7,8,9]])
 ```
 
-### Pandas: Group by and aggregate
+### Pandas: Group by
 
 ```python
 import pandas as pd
@@ -127,10 +127,20 @@ units_sold.columns = ["Product","Total Revenue"]
 
 # Merge the two DataFrames on the "Product" column
 sales_summary = pd.merge(units_sold, total_rev, on="Product")
+```
 
-# Write the sales summary to a new CSV file
-sales_summary.to_csv("sales_summary.csv", index=False)
+### Pandas: Group by and agg()
 
-# Output the contents of the new CSV file to the console
-print(sales_summary)
+```python
+import pandas as pd
+
+# Read in the CSV file
+my_data = pd.DataFrame({'Product':['a','a','b'],
+                        'Units Sold':[1,2,0],
+                        'Revenue':[2,5,0]})
+
+# Calculate the total units sold and total revenue for each product
+sales_summary = my_data.groupby("Product",as_index=False).\
+agg({"Units Sold": "sum", "Revenue": "sum"})
+sales_summary.columns = ["Product","Total Units Sold","Total Revenue"]
 ```

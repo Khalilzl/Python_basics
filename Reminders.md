@@ -172,8 +172,29 @@ Long_book = book_data.sort_values('number of pages',ascending=False).head(1)
 longest_book = book_data.loc[[book_data['number of pages'].idxmax()]]
 ```
 
+### Pandas: idmin and idmax 
+```python
+# calculate name of highest- and lowest-scoring courses for each student
+my_data['highest_course'] = my_data[['course1',\
+                                        'course2',\
+                                        'course3',\
+                                        'course4']].idxmax(axis=1)
+my_data['lowest_course'] = my_data[['course1',\
+                                       'course2',\
+                                       'course3',\
+                                       'course4']].idxmin(axis=1)
+```
+
 ### Pandas: dt. to transform dates
 ```python
 # Filter the DataFrame to only include sales transactions from December 2022
 dec_22_sales = my_sales_data.loc[my_sales_data['date'].dt.to_period('M') == '2022-12']
+```
+
+### Pandas: Group by and agg with 2 columns
+```python
+result = my_customer_data.groupby(['product',\
+                                   my_customer_data['order date'].dt.year,\
+                                   my_customer_data['order date'].dt.month])\
+                                   .agg({'quantity': 'sum', 'count': 'sum'})
 ```

@@ -130,7 +130,6 @@ sales_summary = pd.merge(units_sold, total_rev, on="Product")
 ```
 
 ### Pandas: Group by and agg()
-
 ```python
 import pandas as pd
 
@@ -143,4 +142,32 @@ my_data = pd.DataFrame({'Product':['a','a','b'],
 sales_summary = my_data.groupby("Product",as_index=False).\
 agg({"Units Sold": "sum", "Revenue": "sum"})
 sales_summary.columns = ["Product","Total Units Sold","Total Revenue"]
+```
+
+### Pandas: Pivot table
+```python
+import pandas as pd
+
+# Read in the CSV file
+my_data = pd.DataFrame({'Product':['a','a','b'],
+                        'Units Sold':[1,2,0],
+                        'Revenue':[2,5,0]})
+
+# Pivot the data to calculate the total units sold and total revenue for each product
+sales_summary = my_data.pivot_table(index="Product", values=["Units Sold", "Revenue"], aggfunc="sum")
+sales_summary.columns = ["Total Units Sold","Total Revenue"]
+```
+
+### Pandas: Filter based on column value)
+```python
+book_data = book_data.loc[book_data['publication year']>=2000].sort_values('publication year',asending=True)
+```
+
+### Pandas: id of the maximum
+```python
+# Longest book
+Long_book = book_data.sort_values('number of pages',ascending=False).head(1)
+
+# Longest book
+longest_book = book_data.loc[[book_data['number of pages'].idxmax()]]
 ```

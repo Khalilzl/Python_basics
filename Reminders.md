@@ -96,16 +96,15 @@ print(round(np.std(arr),11))
 
 ### Array shape and reshape
 ```python
-my_array = numpy.array([1,2,3,4,5,6])
-my2darray = numpy.reshape(my_array,(3,2))
+my_array = np.array([1,2,3,4,5,6])
+my2darray = np.reshape(my_array,(3,2))
 ```
 
 ### Concatenating array
 ```python
-import numpy
-
-array_1 = numpy.array([[1,2,3],[0,0,0]])
-array_2 = numpy.array([[0,0,0],[7,8,9]])
+import numpy as np
+array_1 = np.array([[1,2,3],[0,0,0]])
+array_2 = np.array([[0,0,0],[7,8,9]])
 ```
 
 

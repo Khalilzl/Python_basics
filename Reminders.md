@@ -15,13 +15,13 @@ a = "-".join(a)
 
 ```
 
-### Filtering a list using list comprehenshion
+### Losts: Filtering using list comprehenshion
 ```python
 numbers = [70, 60, 80, 90, 50,82,90,91]
 filtered_list = [ i for i in numbers if i>= 80]
 ```
 
-### Sorting a list based on tuple positions
+### Lists: Sorting based on tuple positions
 ```python
 # Sorting based on first element of the tuple
 my_list = [['d',2],['v',4],['a',3]]
@@ -37,7 +37,7 @@ l = [[1,3,2],[3,4,2],[3,1,4],[1,2,3]]
 print(sorted(l, key= lambda t:(t[0],t[1],t[2])))
 ```
 
-### Filtering a dictionary based on values or keys
+### Dictionaries: Filtering based on values or keys
 ```python 
 # Filtering based on values
 d1 = {'a':1,'b':2,'c':3}
@@ -48,7 +48,7 @@ d1 = {'a':1,'b':2,'c':3}
 d2 = {key:value for key,value in d1.items() if key=='a'}
 ```
 
-### Sorting a dictionary
+### Dictionaries: Sorting
 ```python 
 # Sorting a dictionary by key
 my_dict = {'1':2,'2':7, '3':7,'4':3}
@@ -62,7 +62,7 @@ print(dict(sorted(my_dict.items(), key=lambda item: (item[1],item[0]))))
 print(dict(sorted(my_dict.items(), key=lambda item: (-item[1],item[0]), reverse=True)))
 ```
 
-### List transformation using map and lambda
+### Lists: transformation using map and lambda
 ```python
 # Make a list of the squares of integers from  to  (both included).
 l1 = list(range(10))
@@ -94,13 +94,13 @@ print(np.var(arr, axis = 0))
 print(round(np.std(arr),11))
 ```
 
-### Array shape and reshape
+### Arrays: shape and reshape
 ```python
 my_array = np.array([1,2,3,4,5,6])
 my2darray = np.reshape(my_array,(3,2))
 ```
 
-### Concatenating array
+### Arrays: concatenating array
 ```python
 import numpy as np
 array_1 = np.array([[1,2,3],[0,0,0]])

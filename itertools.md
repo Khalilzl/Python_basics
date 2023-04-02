@@ -19,11 +19,6 @@ combw_rpl_2 = ['_'.join(x) for x in list(itertools.combinations_with_replacement
 selectors = [1,0,1]
 compress = list(itertools.compress(list_test, selectors))
 
-# Groupby elements within iterator (e.g. characters in string)
-groupbytest = list(k for k,g in itertools.groupby(str_test))
-tuple_test=(list((k,len(list(g))) for k,g in itertools.groupby(str_test)))
-sample = sorted(tuple_test, key = lambda x: x[1],reverse=True)
-
 # Sort list
 tuple_test = list([k,len(list(g))] for k,g in itertools.groupby(str_test))
 sample = sorted(tuple_test, key = lambda x: x[1],reverse=True)

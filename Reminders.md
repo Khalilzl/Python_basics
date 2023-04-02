@@ -209,3 +209,8 @@ result = my_customer_data.groupby(['product',\
                                    my_customer_data['order date'].dt.month])\
                                    .agg({'quantity': 'sum', 'count': 'sum'})
 ```
+
+### Pandas: Replace  NaN values
+```python
+new_dat = new_dat.fillna('None')
+```

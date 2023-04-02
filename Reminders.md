@@ -158,9 +158,9 @@ sales_summary = my_data.pivot_table(index="Product", values=["Units Sold", "Reve
 sales_summary.columns = ["Total Units Sold","Total Revenue"]
 ```
 
-### Pandas: Filter based on column value)
+### Pandas: Filter a dataframe based on column value
 ```python
-book_data = book_data.loc[book_data['publication year']>=2000].sort_values('publication year',asending=True)
+book_data = book_data.loc[book_data['publication year']>=2000].sort_values('publication year',ascending=True)
 ```
 
 ### Pandas: id of the maximum
@@ -170,4 +170,10 @@ Long_book = book_data.sort_values('number of pages',ascending=False).head(1)
 
 # Longest book
 longest_book = book_data.loc[[book_data['number of pages'].idxmax()]]
+```
+
+### Pandas: dt. to transform dates
+```python
+# Filter the DataFrame to only include sales transactions from December 2022
+dec_22_sales = my_sales_data.loc[my_sales_data['date'].dt.to_period('M') == '2022-12']
 ```

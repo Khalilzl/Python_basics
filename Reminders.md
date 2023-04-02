@@ -187,10 +187,19 @@ my_data['lowest_course'] = my_data[['course1',\
                                        'course4']].idxmin(axis=1)
 ```
 
-### Pandas: dt. to transform dates
+### Pandas: .dt and .grouper to transform dates
 ```python
 # Filter the DataFrame to only include sales transactions from December 2022
 dec_22_sales = my_sales_data.loc[my_sales_data['date'].dt.to_period('M') == '2022-12']
+
+# dt
+monthly_totals = data.groupby([data['date'].dt.year,data['date'].dt.month])\
+['sales','expenses'].\
+agg({'sales':sum, 'expenses':sum})
+
+# grouper
+monthly_totals = data.groupby(pd.Grouper(key='date', freq='M')).\
+agg({'sales': 'sum', 'expenses': 'sum'})
 ```
 
 ### Pandas: Group by and agg with 2 columns

@@ -15,7 +15,7 @@ a = "-".join(a)
 
 ```
 
-### Losts: Filtering using list comprehenshion
+### Lists: Filtering using list comprehenshion
 ```python
 numbers = [70, 60, 80, 90, 50,82,90,91]
 filtered_list = [ i for i in numbers if i>= 80]

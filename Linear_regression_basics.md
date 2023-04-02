@@ -1,7 +1,6 @@
 ```python
 
 #Load the dataset into a pandas DataFrame:
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -11,11 +10,11 @@ plt.show()
 
 # Plot a scatter matrix to see the correlation between features
 from pandas.plotting import scatter_matrix
-
 attributes = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot']
 scatter_matrix(housing_data[attributes], figsize=(12, 8))
 plt.show()
-Preprocess the dataset as required:
+
+#Preprocess the dataset as required
 
 # Check for missing values
 housing_data.isnull().sum()
@@ -40,20 +39,17 @@ X_test = test_set.drop('price', axis=1)
 
 # Scale the features
 from sklearn.preprocessing import StandardScaler
-
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 Build a linear regression model on the training set:
 
 from sklearn.linear_model import LinearRegression
-
 lin_reg = LinearRegression()
 lin_reg.fit(X_train_scaled, y_train)
-Evaluate the performance of the model on the testing set:
 
+# Evaluate the performance of the model on the testing set:
 from sklearn.metrics import mean_squared_error
-
 y_pred = lin_reg.predict(X_test_scaled)
 mse = mean_squared_error(y_test, y_pred)
 rmse = np.sqrt(mse)

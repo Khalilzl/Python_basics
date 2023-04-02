@@ -1,6 +1,5 @@
 ## Python basics: Manipulating lists, tuples, dictionaries, arrays, and strings
 ### strip(), split(), and join() to split strings into lists and remove trailing spaces
-
 ```python 
 # Strip removes trailing spaces
 a = "this is a string        "
@@ -39,7 +38,6 @@ print(sorted(l, key= lambda t:(t[0],t[1],t[2])))
 ```
 
 ### Filtering a dictionary based on values or keys
-
 ```python 
 # Filtering based on values
 d1 = {'a':1,'b':2,'c':3}
@@ -65,7 +63,6 @@ print(dict(sorted(my_dict.items(), key=lambda item: (-item[1],item[0]), reverse=
 ```
 
 ### List transformation using map and lambda
-
 ```python
 # Make a list of the squares of integers from  to  (both included).
 l1 = list(range(10))
@@ -74,3 +71,41 @@ l3 = list(map(lambda x:x*x, l1))
 
 print(l1,l2,l3)
 ```
+
+### Arrays: multiplying vectors
+```python
+import numpy as np
+
+A = np.array([0, 1])
+B = np.array([3, 4])
+
+arr = [A,B]
+
+# Inner or dot product
+print(np.inner(A,B))
+print (np.dot(A, B))
+
+# Outer product 
+print(np.outer(A,B))
+
+# mean/var/std
+print(np.mean(arr, axis = 1)) 
+print(np.var(arr, axis = 0))
+print(round(np.std(arr),11))
+```
+
+### Array shape and reshape
+```python
+my_array = numpy.array([1,2,3,4,5,6])
+my2darray = numpy.reshape(my_array,(3,2))
+```
+
+### Concatenating array
+```python
+import numpy
+
+array_1 = numpy.array([[1,2,3],[0,0,0]])
+array_2 = numpy.array([[0,0,0],[7,8,9]])
+```
+
+

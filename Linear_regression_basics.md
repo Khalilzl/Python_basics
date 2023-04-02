@@ -28,7 +28,6 @@ housing_data = housing_data[housing_data['price'] < 6000000]
 
 # Split the dataset into training and testing sets
 from sklearn.model_selection import train_test_split
-
 train_set, test_set = train_test_split(housing_data, test_size=0.2, random_state=42)
 
 # Separate the target variable from the predictors
@@ -42,8 +41,8 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
-Build a linear regression model on the training set:
 
+# Build a linear regression model on the training set:
 from sklearn.linear_model import LinearRegression
 lin_reg = LinearRegression()
 lin_reg.fit(X_train_scaled, y_train)

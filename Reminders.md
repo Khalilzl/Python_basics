@@ -161,6 +161,8 @@ sales_summary.columns = ["Total Units Sold","Total Revenue"]
 ### Pandas: Filter a dataframe based on column value
 ```python
 book_data = book_data.loc[book_data['publication year']>=2000].sort_values('publication year',ascending=True)
+
+filtered_data = data.loc[(str(data['name'])[0] == 'J') & (data['age'] > 30)][['name', 'salary']]
 ```
 
 ### Pandas: id of the maximum
